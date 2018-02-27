@@ -16,9 +16,9 @@ export default {
   },
   created () {
     axios.get('https://min-api.cryptocompare.com/data/pricemulti?fsyms=BTC,ETH,IOT,LTC,XMR&tsyms=USD,EUR')
-    .then(response => {
-      this.cryptocurrencies = response.data;
-    }).catch(error => this.errors.push(error));
+      .then(response => {
+        this.cryptocurrencies = response.data
+      }).catch(error => this.errors.push(error))
   }
 }
 </script>

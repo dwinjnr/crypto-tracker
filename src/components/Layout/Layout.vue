@@ -39,22 +39,22 @@
                 <v-toolbar-title>CRYPTOCURRENCY | USD | NGN</v-toolbar-title>
               </v-toolbar>
               <v-list three-line>
-                <v-list-tile avatar>
+                <v-list-tile avatar v-for="(price, currency) in cryptocurrencies" :key="currency">
                   <v-list-tile-avatar>
-                    <img src="'currency_img'">
+                    <img :src="images[currency]">
                   </v-list-tile-avatar>
                   <v-list-tile-content>
-                    <v-list-tile-title v-text="'Bitcoin'">
+                    <v-list-tile-title v-text="currency">
                     </v-list-tile-title>
                   </v-list-tile-content>
                    <v-list-tile-content>
                     <v-list-tile-title>
-                      {{usd}}
+                      <span>${{price.USD}}</span>
                     </v-list-tile-title>
                   </v-list-tile-content>
                    <v-list-tile-content>
                     <v-list-tile-title>
-                      {{ngn}}
+                      <span>${{price.EUR}}</span>
                     </v-list-tile-title>
                   </v-list-tile-content>
                   <v-list-tile-action>
@@ -63,7 +63,7 @@
                         <v-icon dark>add</v-icon>
                       </v-btn>
                     </span>
-                  </v-list-tile-action>  
+                  </v-list-tile-action>
                 </v-list-tile>
               </v-list>
             </v-card>
@@ -81,10 +81,18 @@
 export default {
   data: () => ({
     drawer: true,
-    usd: '10,000',
-    ngn: '3,900,000'
+    images: {
+      BTC: 'https://www.cryptocompare.com/media/19633/btc.png',
+      IOT: 'https://www.cryptocompare.com/media/1383540/iota_logo.png',
+      ETH: 'https://www.cryptocompare.com/media/20646/eth_logo.png',
+      XMR: 'https://www.cryptocompare.com/media/19969/xmr.png',
+      LTC: 'https://www.cryptocompare.com/media/19782/litecoin-logo.png'
+    }
   }),
   props: {
+    cryptocurrencies: {
+      required: true
+    },
     source: String
   }
 }
