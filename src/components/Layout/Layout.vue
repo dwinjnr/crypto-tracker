@@ -38,7 +38,7 @@
               <v-toolbar light>
                 <v-toolbar-title>CRYPTOCURRENCY | USD | NGN</v-toolbar-title>
               </v-toolbar>
-              <v-list three-line>
+              <v-list two-line>
                 <v-list-tile avatar v-for="(price, currency) in cryptocurrencies" :key="currency">
                   <v-list-tile-avatar>
                     <img :src="images[currency]">
@@ -54,7 +54,7 @@
                   </v-list-tile-content>
                    <v-list-tile-content>
                     <v-list-tile-title>
-                      <span>${{price.EUR}}</span>
+                      <span>N{{price.NGN}}</span>
                     </v-list-tile-title>
                   </v-list-tile-content>
                   <v-list-tile-action>
