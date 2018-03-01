@@ -18,7 +18,7 @@
         <v-divider></v-divider>
         <v-list-tile>
           <v-list-tile-action>
-            <v-icon>settings</v-icon>
+            <v-icon>account_circle</v-icon>
           </v-list-tile-action>
           <v-list-tile-content>
             <v-list-tile-title>Logout</v-list-tile-title>
@@ -58,11 +58,12 @@
                     </v-list-tile-title>
                   </v-list-tile-content>
                   <v-list-tile-action>
-                    <span>
-                      <v-btn small fab dark>
-                        <v-icon dark>add</v-icon>
+                    <v-tooltip left>
+                      <v-btn small fab slot="activator">
+                        <v-icon>track_changes</v-icon>
                       </v-btn>
-                    </span>
+                      <span>Track Changes</span>
+                    </v-tooltip>
                   </v-list-tile-action>
                 </v-list-tile>
               </v-list>
