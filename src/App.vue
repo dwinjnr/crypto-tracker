@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <router-view :cryptocurrencies = "cryptocurrencies"/>
+    <router-view :cryptocurrencies = "crypto"/>
   </div>
 </template>
 
@@ -10,7 +10,7 @@ export default {
   name: 'App',
   data () {
     return {
-      cryptocurrencies: [],
+      crypto: [],
       errors: []
     }
   },
@@ -22,7 +22,7 @@ export default {
     fetchData () {
       axios.get('https://min-api.cryptocompare.com/data/pricemulti?fsyms=BTC,ETH,IOT,XMR,LTC&tsyms=USD,NGN')
         .then(response => {
-          this.cryptocurrencies = response.data
+          this.crypto = response.data
         }).catch(error => this.errors.push(error))
     }
   }
