@@ -28,7 +28,8 @@
               <img :src="images.BTC">
             </v-list-tile-avatar>
             <v-list-tile-content>
-              <v-list-tile-title v-text="BTC">
+              <v-list-tile-title>
+                <span>BTC</span>
               </v-list-tile-title>
             </v-list-tile-content>
             <v-list-tile-content>
