@@ -6,7 +6,7 @@
       v-model="drawer"
       app
     >
-      <v-list dense>
+      <v-list dense v-if="login">
         <v-list-tile to="dashboard">
           <v-list-tile-action>
             <v-icon>dashboard</v-icon>
@@ -15,13 +15,38 @@
             <v-list-tile-title>Dashboard</v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
-        <v-divider></v-divider>
         <v-list-tile to="user">
           <v-list-tile-action>
             <v-icon>person</v-icon>
           </v-list-tile-action>
           <v-list-tile-content>
             <v-list-tile-title>User</v-list-tile-title>
+          </v-list-tile-content>
+        </v-list-tile>
+      </v-list>
+      <v-list dense v-else>
+        <v-list-tile to="dashboard">
+          <v-list-tile-action>
+            <v-icon>dashboard</v-icon>
+          </v-list-tile-action>
+          <v-list-tile-content>
+            <v-list-tile-title>Dashboard</v-list-tile-title>
+          </v-list-tile-content>
+        </v-list-tile>
+        <v-list-tile to="login">
+          <v-list-tile-action>
+            <v-icon>account_circle</v-icon>
+          </v-list-tile-action>
+          <v-list-tile-content>
+            <v-list-tile-title>Login</v-list-tile-title>
+          </v-list-tile-content>
+        </v-list-tile>
+        <v-list-tile to="register">
+          <v-list-tile-action>
+            <v-icon>person</v-icon>
+          </v-list-tile-action>
+          <v-list-tile-content>
+            <v-list-tile-title>Register</v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
       </v-list>
@@ -48,13 +73,13 @@
 <script>
 export default {
   data: () => ({
-    drawer: true
+    drawer: true,
+    login: false
   }),
   props: {
     cryptocurrencies: {
       required: true
-    },
-    source: String
+    }
   }
 }
 </script>
