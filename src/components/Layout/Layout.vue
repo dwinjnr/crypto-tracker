@@ -50,17 +50,16 @@
           </v-list-tile-content>
         </v-list-tile>
       </v-list>
+      <v-divider></v-divider>
       <v-list>
       <v-list-tile>
           <v-list-tile-action>
-            <v-icon>person</v-icon>
+            <span>Login</span>
           </v-list-tile-action>
           <v-list-tile-content>
-            <v-list-tile-title>
-              <v-container fluid>
-                <v-switch :label="`${switch1.toString()}`" v-model="login"></v-switch>
-                <v-switch :label="`${switch2.toString()}`" v-model="login"></v-switch>
-              </v-container>
+            <v-list-tile-title style="padding: 0px 0px 5px 13px;">
+              <v-switch dark :label="`${login.toString()}`" v-model="login"></v-switch>
+              <v-switch dark :label="`${login.toString()}`" v-model="login"></v-switch>
             </v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
