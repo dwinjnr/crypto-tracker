@@ -79,7 +79,7 @@
         </v-container>
       </v-content>
     <v-footer app fixed>
-      <span>&copy; 2017</span>
+      <span>CryptoTracker &copy; 2018 by <a style="text-decoration:none;" href="www.github.com/dwinjnr">Godwin Ogbonnaya Jnr</a></span>
     </v-footer>
   </v-app>
 </template>

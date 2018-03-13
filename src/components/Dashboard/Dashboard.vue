@@ -1,8 +1,6 @@
 <template>
   <v-card raised>
-    <v-toolbar light>
-      <v-toolbar-title>CRYPTOCURRENCY | USD | NGN</v-toolbar-title>
-    </v-toolbar>
+    <v-card-title>CRYPTOCURRENCY | TRACK PRICE | CURRENT PRICE </v-card-title>
     <v-list two-line>
       <v-list-tile avatar v-for="(price, currency) in cryptocurrencies" :key="currency">
         <v-list-tile-avatar>
@@ -25,7 +23,7 @@
         <v-list-tile-action>
           <v-tooltip left>
             <v-btn small fab slot="activator">
-              <v-icon>track_changes</v-icon>
+              <v-icon>add_alert</v-icon>
             </v-btn>
             <span>Track Changes</span>
           </v-tooltip>
