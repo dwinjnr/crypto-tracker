@@ -1,7 +1,7 @@
-# project
+# CyptoTracker
 
-> A Vue.js project
-
+> A web application that helps you track changes in cryptocurrencies using Vue.js
+[Live Preview](https://dwinjnrct.netlify.com/)
 ## Build Setup
 
 ``` bash
