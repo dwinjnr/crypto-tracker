@@ -1,7 +1,9 @@
 # CyptoTracker
 
-> A web application that helps you track changes in cryptocurrencies using Vue.js
+> A web application that helps you track changes in cryptocurrencies front-end design using Vue.js
+
 [Live Preview](https://dwinjnrct.netlify.com/)
+
 ## Build Setup
 
 ``` bash
