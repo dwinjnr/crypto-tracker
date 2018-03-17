@@ -79,7 +79,7 @@
         </v-container>
       </v-content>
     <v-footer app fixed>
-      <span>CryptoTracker &copy; 2018 by <a style="text-decoration:none;" href="www.github.com/dwinjnr">Godwin Ogbonnaya Jnr</a></span>
+      <span>CryptoTracker &copy; 2018 by <a style="text-decoration:none;" :href="githuburl">Godwin Ogbonnaya Jnr</a></span>
     </v-footer>
   </v-app>
 </template>
@@ -87,8 +87,9 @@
 <script>
 export default {
   data: () => ({
-    drawer: true,
-    login: false
+    drawer: false,
+    login: false,
+    githuburl: 'https://github.com/dwinjnr'
   }),
   props: {
     cryptocurrencies: {
