@@ -2,7 +2,7 @@
   <v-container grid-list-md text-xs-center>
     <v-layout row wrap>
       <v-flex xs12>
-        <v-card raised>
+        <v-card raised hover>
           <v-container grid-list-md>
             <v-layout row wrap>
               <v-flex xs12 sm6>
@@ -19,8 +19,8 @@
         </v-card>
       </v-flex>
       <v-flex xs12>
-        <v-card raised>
-          <v-card-title>CRYPTOCURRENCY | TRACK PRICE | CURRENT PRICE </v-card-title>
+        <v-card raised hover>
+          <v-card-title>CRYPTOCURRENCY | TRACKING PRICE @ </v-card-title>
           <v-list two-line>
             <v-list-tile avatar>
               <v-list-tile-avatar>
@@ -34,11 +34,6 @@
               <v-list-tile-content>
                 <v-list-tile-title>
                   <span>${{trackPrice}}</span>
-                </v-list-tile-title>
-              </v-list-tile-content>
-              <v-list-tile-content>
-                <v-list-tile-title>
-                  <span>${{cryptocurrencies.BTC.USD}}</span>
                 </v-list-tile-title>
               </v-list-tile-content>
               <v-list-tile-action>
@@ -71,11 +66,6 @@ export default {
       XMR: 'https://www.cryptocompare.com/media/19969/xmr.png',
       LTC: 'https://www.cryptocompare.com/media/19782/litecoin-logo.png'
     }
-  }),
-  props: {
-    cryptocurrencies: {
-      required: true
-    }
-  }
+  })
 }
 </script>

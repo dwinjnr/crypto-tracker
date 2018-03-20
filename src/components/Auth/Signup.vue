@@ -1,6 +1,6 @@
 <template>
-  <v-flex xs12 sm8 offset-sm2>
-    <v-card raised>
+  <v-flex xs12 sm10 offset-sm1>
+    <v-card raised hover>
       <v-container>
         <v-form v-model="valid" ref="form" lazy-validation>
           <v-text-field
