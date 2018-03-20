@@ -1,5 +1,5 @@
 <template>
-  <v-app id="inspire" dark>
+  <v-app id="inspire" light>
     <v-navigation-drawer
       clipped
       fixed
@@ -51,19 +51,21 @@
         </v-list-tile>
       </v-list>
       <v-divider></v-divider>
-      <v-list>
-      <v-list-tile>
-          <v-list-tile-action>
-            <span>Login</span>
-          </v-list-tile-action>
-          <v-list-tile-content>
-            <v-list-tile-title style="padding: 0px 0px 5px 13px;">
-              <v-switch dark :label="`${login.toString()}`" v-model="login"></v-switch>
-              <v-switch dark :label="`${login.toString()}`" v-model="login"></v-switch>
-            </v-list-tile-title>
-          </v-list-tile-content>
-        </v-list-tile>
-      </v-list>
+      <v-container>
+        <v-layout row wrap>
+          <v-flex sm6><span style="margin-top: 5px; display: block;">Login</span></v-flex>
+          <v-flex sm6>
+            <v-list style="margin-top: 0px; padding: 0px;">
+              <v-list-tile-content>
+                <v-list-tile-title style="height: 50px; padding-left: 5px;">
+                  <v-switch light :label="`${login.toString()}`" v-model="login"></v-switch>
+                  <v-switch light :label="`${login.toString()}`" v-model="login"></v-switch>
+                </v-list-tile-title>
+              </v-list-tile-content>
+            </v-list>
+          </v-flex>
+        </v-layout>
+      </v-container>
     </v-navigation-drawer>
     <v-toolbar app fixed clipped-left>
       <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
