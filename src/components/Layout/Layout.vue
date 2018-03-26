@@ -71,7 +71,7 @@
       <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
       <v-toolbar-title>Crypto Tracker</v-toolbar-title>
     </v-toolbar>
-      <v-content>
+      <v-content id="content">
         <v-container fluid fill-height>
           <v-layout justify-center>
             <v-flex xs12 sm10>
@@ -81,7 +81,7 @@
         </v-container>
       </v-content>
     <v-footer app fixed>
-      <span>CryptoTracker &copy; 2018 designed by <a style="text-decoration:none;" :href="githuburl">Godwin Ogbonnaya Jnr</a></span>
+      <span  style="font-size:10px;">CryptoTracker &copy; 2018 designed by <a style="text-decoration:none;" :href="githuburl">Godwin Ogbonnaya Jnr</a></span>
     </v-footer>
   </v-app>
 </template>
@@ -100,3 +100,9 @@ export default {
   }
 }
 </script>
+
+<style>
+.content {
+  padding-top: 0px !important;
+}
+</style>

@@ -42,7 +42,12 @@ export default {
       IOT: 'https://www.cryptocompare.com/media/1383540/iota_logo.png',
       ETH: 'https://www.cryptocompare.com/media/20646/eth_logo.png',
       XMR: 'https://www.cryptocompare.com/media/19969/xmr.png',
-      LTC: 'https://www.cryptocompare.com/media/19782/litecoin-logo.png'
+      LTC: 'https://www.cryptocompare.com/media/19782/litecoin-logo.png',
+      TRX: 'https://www.cryptocompare.com/media/12318089/trx.png',
+      XRP: 'https://www.cryptocompare.com/media/19972/ripple.png',
+      BNB: 'https://www.cryptocompare.com/media/1383947/bnb.png',
+      QTUM: 'https://www.cryptocompare.com/media/1383382/qtum.png',
+      ELF: 'https://www.cryptocompare.com/media/20780600/elf.png'
     }
   }),
   props: {
