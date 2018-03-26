@@ -89,13 +89,18 @@
 <script>
 export default {
   data: () => ({
-    drawer: false,
+    drawer: true,
     login: false,
     githuburl: 'https://github.com/dwinjnr'
   }),
   props: {
     cryptocurrencies: {
       required: true
+    }
+  },
+  created () {
+    if (window.outerWidth < 768) {
+      this.drawer = false
     }
   }
 }
